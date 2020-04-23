@@ -4,9 +4,9 @@
     <form method="POST" action="/articles/<%=@article.id%>">
       <input id="hidden" type="hidden" name="_method" value="PATCH">
       <label for="title">Title</label>
-      <input id="title" type="text" name="article[title]" value="<%= @article.title %>" />
+      <input id="title" type="text" name="article_title" value="<%= @article.title %>" />
       <label for="content">Content</label>
-      <input id="content" type="text" name="article[content]"  value="<%= @article.content %>"/>
+      <input id="content" type="text" name="article_content"  value="<%= @article.content %>"/>
   <input type="submit" />
     </form>
   </body>
