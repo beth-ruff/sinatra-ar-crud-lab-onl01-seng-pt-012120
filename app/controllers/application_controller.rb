@@ -38,6 +38,8 @@ class ApplicationController < Sinatra::Base
   end 
   
   patch '/articles/:id' do 
+    @article = Article.find_by_id(params[:id])
+    
   end 
   
   delete '/articles/:id' do 
