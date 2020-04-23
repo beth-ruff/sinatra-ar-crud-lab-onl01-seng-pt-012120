@@ -3,7 +3,7 @@
   <body>
     <form method="POST" action="/articles/<%=@article.id%>">
       <input id="hidden" type="hidden" name="_method" value="PATCH">
-      <p>Title: <input type="text" id="title" name="articles[title]" value="<%=@article.title%>"></p>
+      <p>Title: <input type="text" id="title" name="article[title]" value="<%=@article.title%>"></p>
       <br/>
       <p>Content: <input type="text" id="content" name="article[content]" value="<%=@article.content%>"></p>
       <br/>
