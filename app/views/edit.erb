@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <form action="/articles/<%= @article.id %>" method="POST">
+    <form method="POST" action="/articles/<%= @article.id %>">
       <input id="hidden" type="hidden" name="_method" value="PATCH">
       <p>Title: <input type="text" id="title" name="title" value="<%=@article.title%>"></p>
       <br/>
