@@ -34,16 +34,11 @@ class ApplicationController < Sinatra::Base
   
   get '/articles/:id/edit' do 
     @article = Article.find(params[:id])
-    erb :edit 
-  end 
- 
-   patch '/articles/:id' do 
-    @article = Article.find_by_id(params[:id])
-    @article.title = params[:title]
+      @article.title = params[:title]
     @article.content = params[:content]
     @article.save
-    erb :show  
-  end
+    erb :edit 
+  end 
   
   delete '/articles/:id' do 
     @article = Article.find(params[:id])
